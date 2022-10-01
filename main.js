@@ -95,9 +95,15 @@ residuo.onclick = (e) => {
     agregar("%")
  };
 
- var cancelar = document.getElementById("C")
+ var cancelar = document.getElementById("AC")
  cancelar.onclick = (e) => {
     textarea.textContent = ""
+};
+
+var del = document.getElementById("DEL")
+del.onclick = (e) => {
+let newText = textarea.textContent.substring(0, textarea.textContent.length - 1);
+textarea.textContent = newText;
 };
 
 var igualdad = document.getElementById("=");
