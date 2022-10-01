@@ -1,0 +1,32 @@
+.calculadora {
+    background-color: rgb(153, 150, 150);
+    width: 30em;
+    height: 45em;
+    margin: auto;
+    border-radius: 1em;
+    text-align: center;
+}
+.output {
+    background-color: rgb(93, 134, 93);
+    margin: auto;
+    width: 25em;
+    height: 5em;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    margin-bottom: 3em;
+}
+
+button {
+    width: 5em;
+    height: 4em;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.textarea {
+    font-size: 2em;
+}
