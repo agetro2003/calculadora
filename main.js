@@ -102,7 +102,12 @@ residuo.onclick = (e) => {
 
 var igualdad = document.getElementById("=");
 igualdad.onclick = (e) => {
-   let resultado = eval(textarea.textContent);
-    textarea.textContent = resultado;
+    try {
+         let resultado = eval(textarea.textContent);
+    textarea.textContent = resultado; 
+    } catch (error) {
+        textarea.textContent = error.name
+    }
+ 
 };
 
