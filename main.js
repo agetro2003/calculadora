@@ -5,6 +5,37 @@ function agregar (char) {
     textarea.appendChild(text)
 }
 
+document.addEventListener("keyup", (e) => {
+    let valores = ["1", "2", "3", "+", 
+    "4","5","6","-",
+    "7","8","9","/",
+    "(","0",")","x","*",
+    ".","=","%",
+    "Backspace", "Enter"
+]
+    if (valores.includes(e.key)){
+        if(e.key == "x"){
+            agregar("*")
+        } else if (e.key == "Backspace"){
+let newText = textarea.textContent.substring(0, textarea.textContent.length - 1);
+textarea.textContent = newText;
+        } else if (e.key == "Enter" || e.key == "="){
+            try {
+                let resultado = eval(textarea.textContent);
+           textarea.textContent = resultado; 
+           } catch (error) {
+               textarea.textContent = error.name
+           }
+        }
+        else{
+          agregar(e.key);    
+        }
+       
+    }
+ 
+console.log(e.key)
+});
+
 var boton1 = document.getElementById("1");
 boton1.onclick = (e) => {
    agregar("1")
